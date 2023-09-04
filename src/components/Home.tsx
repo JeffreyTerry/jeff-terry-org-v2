@@ -1,12 +1,12 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import styled from 'styled-components';
-import Introduction from './home/Introduction';
-import RecentProjects from './home/RecentProjects';
-import Expertise from './home/Expertise';
-import Links from './home/Links';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import styled from "styled-components";
+import Introduction from "./home/Introduction";
+import RecentProjects from "./home/RecentProjects";
+import Expertise from "./home/Expertise";
+import Links from "./home/Links";
 // import Bookshelf from './home/Bookshelf';
-import Footer from './home/Footer';
+import Footer from "./home/Footer";
 
 const HomeContainer = styled(Container)`
   padding-top: 50px;
