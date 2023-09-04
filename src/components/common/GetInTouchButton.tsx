@@ -1,8 +1,8 @@
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import styled from 'styled-components';
-import MailTo from './MailTo';
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import styled from "styled-components";
+import MailTo from "./MailTo";
 
 const StyledMailTo = styled(MailTo)`
   width: fit-content;
@@ -13,7 +13,7 @@ const StyledMailTo = styled(MailTo)`
   display: inline-block;
   color: ${(props) => props.theme.primaryColor};
   border-radius: 4rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   :hover {
     text-decoration: inherit;

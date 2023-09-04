@@ -1,0 +1,3 @@
+// Mocks resource files such as images, audio, etc...
+// See the `moduleNameMapper` in jest.config.js for more details.
+module.exports = 'test-file-stub'
