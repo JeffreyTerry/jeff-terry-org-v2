@@ -67,7 +67,7 @@ const LinkItem = styled.h3`
 `;
 
 function Links() {
-  const theme: ColorTheme = useContext(ThemeContext);
+  const theme: ColorTheme | undefined = useContext(ThemeContext);
 
   return (
     <LinksRow>
@@ -85,7 +85,7 @@ function Links() {
                 {/* <Link to='/resume' style={{ color: '#148F46' }}> */}
                 <a
                   href={withPrefix("./JeffTerryResume.pdf")}
-                  style={{ color: theme.name === "light" ? "#009D49" : "#3FBD79" }}
+                  style={{ color: theme?.name === "light" ? "#009D49" : "#3FBD79" }}
                 >
                   <LinkItem>
                     <NoWrap>
@@ -99,7 +99,7 @@ function Links() {
                 <OutboundLink
                   href='https://github.com/JeffreyTerry'
                   style={{
-                    color: theme.name === "light" ? "#171515" : "rgb(240, 246, 251)",
+                    color: theme?.name === "light" ? "#171515" : "rgb(240, 246, 251)",
                   }}
                 >
                   <LinkItem>
@@ -127,8 +127,8 @@ function Links() {
                 <OutboundLink
                   href='https://www.goodreads.com/user/show/43070334-jeffrey-terry'
                   style={{
-                    // color: theme.name === 'light' ? '#553b0e' : 'rgb(228, 175, 134)', // Not the official color, but a bit more orange
-                    color: theme.name === "light" ? "#553b0e" : "rgb(228, 223, 202)",
+                    // color: theme?.name === 'light' ? '#553b0e' : 'rgb(228, 175, 134)', // Not the official color, but a bit more orange
+                    color: theme?.name === "light" ? "#553b0e" : "rgb(228, 223, 202)",
                   }}
                 >
                   <LinkItem>
