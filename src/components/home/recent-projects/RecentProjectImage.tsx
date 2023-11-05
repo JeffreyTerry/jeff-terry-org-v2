@@ -1,17 +1,12 @@
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { GatsbyImageProps } from "gatsby-plugin-image";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 interface RecentProjectProps {
   projectUrl: string;
   projectName: string;
+  staticImage?: ReactNode;
 }
-
-const StyledImg = styled(GatsbyImage)`
-  /* cursor: pointer; */
-`;
 
 const ImgFigure = styled.figure`
   position: relative;
@@ -72,14 +67,10 @@ const CaptionViewProjectButton = styled(OutboundLink)`
   }
 `;
 
-function RecentProjectImage({
-  projectUrl,
-  projectName,
-  ...props
-}: GatsbyImageProps & RecentProjectProps) {
+function RecentProjectImage({ projectUrl, projectName, staticImage }: RecentProjectProps) {
   return (
     <ImgFigure>
-      <StyledImg {...props} alt={`A screenshot of ${projectName}`} />
+      {staticImage}
       <ImgFigCaption>
         <CaptionProjectName>{projectName}</CaptionProjectName>
         <CaptionViewProjectButton href={projectUrl}>Try It Out!</CaptionViewProjectButton>

@@ -1,19 +1,17 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 
 function Headshot() {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "Headshot.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 200, height: 200, layout: CONSTRAINED)
-        }
-      }
-    }
-  `);
-
-  return <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt='A photo of me' />;
+  return (
+    <StaticImage
+      src='../../images/Headshot.png'
+      alt='A photo of me'
+      width={200}
+      height={200}
+      layout='constrained'
+      placeholder='blurred'
+    />
+  );
 }
 
 export default Headshot;
