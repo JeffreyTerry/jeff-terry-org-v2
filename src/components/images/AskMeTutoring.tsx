@@ -1,24 +1,20 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import RecentProjectImage from "../home/recent-projects/RecentProjectImage";
+import { StaticImage } from "gatsby-plugin-image";
 
 function AskMeTutoring() {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "AskMeTutoring.png" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-    }
-  `);
-
   return (
     <RecentProjectImage
       projectUrl='https://askmetutoring.org/courses'
       projectName='AskMe Tutoring'
-      alt='AskMe Tutoring'
-      image={data.file.childImageSharp.gatsbyImageData}
+      staticImage={
+        <StaticImage
+          src='../../images/AskMeTutoring.png'
+          alt='AskMe Tutoring'
+          layout='fullWidth'
+          placeholder='blurred'
+        />
+      }
     />
   );
 }
