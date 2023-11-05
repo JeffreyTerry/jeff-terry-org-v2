@@ -1,24 +1,20 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import RecentProjectImage from "../home/recent-projects/RecentProjectImage";
+import { StaticImage } from "gatsby-plugin-image";
 
 function Surfy() {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "Surfy.png" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-    }
-  `);
-
   return (
     <RecentProjectImage
       projectUrl='https://getsurfy.org'
       projectName='Surfy'
-      alt='Surfy'
-      image={data.file.childImageSharp.gatsbyImageData}
+      staticImage={
+        <StaticImage
+          src='../../images/Surfy.png'
+          alt='Surfy'
+          layout='fullWidth'
+          placeholder='blurred'
+        />
+      }
     />
   );
 }

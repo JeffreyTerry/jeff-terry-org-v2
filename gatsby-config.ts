@@ -15,6 +15,14 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Montserrat:500,700"],
+        },
+      },
+    },
+    {
       resolve: `gatsby-styled-components-dark-mode`,
       options: {
         light: LIGHT_THEME,

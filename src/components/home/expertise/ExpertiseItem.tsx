@@ -1,11 +1,9 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 import Col from "react-bootstrap/Col";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import StarRating from "./StarRating";
-import { IGatsbyImageData } from "gatsby-plugin-image";
-import ExpertiseItemImageIcon from "./ExpertiseItemImageIcon";
 
 const ExpertiseItemCol = styled(Col)`
   display: flex;
@@ -72,13 +70,13 @@ const ExpertiseItemName = styled.h3`
 
 function ExpertiseItem({
   icon,
-  logoImage,
+  staticImage,
   name,
   stars,
   iconColor,
 }: {
   icon?: IconProp;
-  logoImage?: IGatsbyImageData;
+  staticImage?: ReactNode;
   iconColor?: string;
   name: string;
   stars: number;
@@ -87,7 +85,7 @@ function ExpertiseItem({
     <ExpertiseItemCol xs={6} sm={4} md={3} xl={2}>
       <ExpertiseItemContainer>
         {icon && <ExpertiseItemIcon icon={icon} style={{ color: iconColor }} />}
-        {logoImage && <ExpertiseItemImageIcon image={logoImage} name={name} alt={name} />}
+        {staticImage && staticImage}
         <ExpertiseItemName>{name}</ExpertiseItemName>
         <StarRating stars={stars} />
       </ExpertiseItemContainer>

@@ -1,0 +1,32 @@
+.expertise-item-image {
+  margin-top: 0.425vw;
+  width: 17.38vw;
+  display: inline-block;
+  margin-bottom: 0.38rem;
+}
+
+@media (min-width: 576px) {
+  .expertise-item-image {
+    width: 11.38vw;
+  }
+}
+@media (min-width: 768px) {
+  .expertise-item-image {
+    width: 8.38vw;
+  }
+}
+@media (min-width: 992px) {
+  .expertise-item-image {
+    width: 6.38vw;
+  }
+}
+@media (min-width: 1800px) {
+  .expertise-item-image {
+    width: 6vw;
+  }
+}
+@media (min-width: 2800px) {
+  .expertise-item-image {
+    width: 4vw;
+  }
+}
