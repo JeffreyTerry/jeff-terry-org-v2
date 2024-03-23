@@ -3,6 +3,7 @@
   width: 17.38vw;
   display: inline-block;
   margin-bottom: 0.38rem;
+  vertical-align: inherit;
 }
 
 @media (min-width: 576px) {
