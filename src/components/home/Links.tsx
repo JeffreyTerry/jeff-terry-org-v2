@@ -33,7 +33,7 @@ const LinkCol = styled(Col)`
 
   a {
     text-decoration: none;
-    :hover {
+    &:hover {
       text-decoration: underline;
     }
   }

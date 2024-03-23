@@ -15,7 +15,7 @@ const StyledMailTo = styled(MailTo)`
   border-radius: 4rem;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  :hover {
+  &:hover {
     text-decoration: inherit;
     color: ${(props) => props.theme.bgColor};
     background-color: ${(props) => props.theme.primaryColor};

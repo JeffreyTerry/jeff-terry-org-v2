@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import GetInTouchButton from '../common/GetInTouchButton';
 
 const FooterRow = styled(Row)`
-  margin-top: 3.5rem;
+  padding-top: 3.5rem;
   padding-bottom: 3.5rem;
   text-align: center;
   font-size: 1.1rem;
