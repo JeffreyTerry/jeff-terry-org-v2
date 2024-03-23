@@ -25,11 +25,11 @@ const ImgFigCaption = styled.figcaption`
     opacity: 0;
   }
   padding-top: calc(50% - 6.4rem);
-  :hover {
+  &:hover {
     padding-top: calc(50% - 6.1rem);
     background-color: rgba(45, 114, 143, 0.9);
   }
-  :hover * {
+  &:hover * {
     opacity: 1;
   }
   /* Modify the margin-bottom for the CaptionProjectName to 
@@ -39,7 +39,7 @@ const ImgFigCaption = styled.figcaption`
     transition: margin-bottom 0.3s ease-out;
     margin-bottom: 1.3rem;
   }
-  :hover h3 {
+  &:hover h3 {
     margin-bottom: 0.7rem;
   }
 `;
@@ -60,7 +60,7 @@ const CaptionViewProjectButton = styled(OutboundLink)`
   width: fit-content;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  :hover {
+  &:hover {
     text-decoration: inherit;
     color: ${(props) => props.theme.lightPrimaryColor};
     background-color: ${(props) => props.theme.lightBgColor};
