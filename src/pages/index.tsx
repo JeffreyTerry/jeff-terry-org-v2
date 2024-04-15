@@ -20,6 +20,9 @@ export const Head: HeadFC = () => (
     <meta charSet='utf-8' />
     <meta httpEquiv='x-ua-compatible' content='ie=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
-    <meta name='keywords' content='Jeffrey, Terry, Durham, North Carolina, Norman, Oklahoma' />
+    <meta
+      name='keywords'
+      content='Jeffrey, Terry, Software, Engineer, Durham, Chapel Hill, Raleigh, North Carolina, Norman, Oklahoma'
+    />
   </>
 );
