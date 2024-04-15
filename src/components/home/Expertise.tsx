@@ -246,7 +246,7 @@ function Expertise() {
           </Row>
           <Row>
             <OutroCol xs={12}>
-              <OutroText>...and I'm always excited to learn new stuff!</OutroText>
+              <OutroText>...and I'm always learning new stuff!</OutroText>
             </OutroCol>
           </Row>
         </Col>
