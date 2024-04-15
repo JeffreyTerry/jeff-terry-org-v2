@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import styled from 'styled-components';
 import Presly from '../images/Presly';
 import Surfy from '../images/Surfy';
-import AskMeTutoring from '../images/AskMeTutoring';
+import AskMeLearning from '../images/AskMeLearning';
 import { SectionHeader } from '../styled/components';
 
 const RecentProjectsRow = styled(Row)`
@@ -49,7 +49,7 @@ function RecentProjects() {
             <Presly />
           </ProjectCol>
           <ProjectCol xs={12} md={6} xl={4}>
-            <AskMeTutoring />
+            <AskMeLearning />
           </ProjectCol>
         </Row>
       </Col>

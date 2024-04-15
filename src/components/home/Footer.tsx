@@ -37,7 +37,7 @@ function Footer() {
         </GetInTouchButtonRow>
         <Row>
           <Col xs={12}>
-            Made with <FontAwesomeIcon icon={faHeart} /> in Oklahoma.
+            Made with <FontAwesomeIcon icon={faHeart} /> in Oklahoma and North Carolina.
           </Col>
         </Row>
       </Col>

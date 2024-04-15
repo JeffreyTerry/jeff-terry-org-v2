@@ -2,15 +2,15 @@ import React from "react";
 import RecentProjectImage from "../home/recent-projects/RecentProjectImage";
 import { StaticImage } from "gatsby-plugin-image";
 
-function AskMeTutoring() {
+function AskMeLearning() {
   return (
     <RecentProjectImage
-      projectUrl='https://askmetutoring.org/courses'
-      projectName='AskMe Tutoring'
+      projectUrl='https://askmelearning.org/courses'
+      projectName='AskMe Learning'
       staticImage={
         <StaticImage
-          src='../../images/AskMeTutoring.png'
-          alt='AskMe Tutoring'
+          src='../../images/AskMeLearning.png'
+          alt='AskMe Learning'
           layout='fullWidth'
           placeholder='blurred'
         />
@@ -19,4 +19,4 @@ function AskMeTutoring() {
   );
 }
 
-export default AskMeTutoring;
+export default AskMeLearning;
