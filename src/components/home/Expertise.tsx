@@ -61,17 +61,7 @@ function Expertise() {
           </Row>
           <Row>
             {/* 5 stars */}
-            <ExpertiseItem
-              staticImage={
-                <StaticImage
-                  src='../../images/expertise/Java.png'
-                  alt="The 'Java' logo"
-                  {...expertiseItemImageProps}
-                />
-              }
-              name='Java'
-              stars={5}
-            />
+            <ExpertiseItem icon={faAws} name='AWS' stars={5} iconColor='#ec9137' />
             <ExpertiseItem
               staticImage={
                 <StaticImage
@@ -83,10 +73,6 @@ function Expertise() {
               name='Python'
               stars={5}
             />
-            <ExpertiseItem icon={faJsSquare} name='JavaScript' stars={5} iconColor='#f7df3a' />
-            <ExpertiseItem icon={faHtml5} name='HTML' stars={5} iconColor='#254deb' />
-            <ExpertiseItem icon={faCss3Alt} name='CSS' stars={5} iconColor='#e44d29' />
-            <ExpertiseItem icon={faBootstrap} name='Bootstrap' stars={5} iconColor='#7853b0' />
             <ExpertiseItem
               staticImage={
                 <StaticImage
@@ -98,9 +84,47 @@ function Expertise() {
               name='Django'
               stars={5}
             />
+            <ExpertiseItem
+              staticImage={
+                <StaticImage
+                  src='../../images/expertise/PostgreSQL.png'
+                  alt="The 'PostgreSQL' logo"
+                  {...expertiseItemImageProps}
+                />
+              }
+              name='PostgreSQL'
+              stars={5}
+            />
             <ExpertiseItem icon={faReact} name='ReactJS' stars={5} iconColor='#61dbfa' />
+            <ExpertiseItem icon={faJsSquare} name='JavaScript' stars={5} iconColor='#f7df3a' />
+            <ExpertiseItem icon={faHtml5} name='HTML' stars={5} iconColor='#254deb' />
+            <ExpertiseItem icon={faCss3Alt} name='CSS' stars={5} iconColor='#e44d29' />
+            <ExpertiseItem icon={faBootstrap} name='Bootstrap' stars={5} iconColor='#7853b0' />
 
             {/* 4 stars */}
+            <ExpertiseItem
+              staticImage={
+                <StaticImage
+                  src='../../images/expertise/Databricks.png'
+                  alt="The 'Databricks' logo"
+                  {...expertiseItemImageProps}
+                />
+              }
+              name='Databricks'
+              stars={4}
+            />
+            <ExpertiseItem icon={faDocker} name='Docker' stars={4} iconColor='#2396ea' />
+            <ExpertiseItem
+              staticImage={
+                <StaticImage
+                  src='../../images/expertise/Java.png'
+                  alt="The 'Java' logo"
+                  {...expertiseItemImageProps}
+                />
+              }
+              name='Java'
+              stars={4}
+            />
             <ExpertiseItem
               staticImage={
                 <StaticImage
@@ -125,19 +149,6 @@ function Expertise() {
             />
 
             {/* 3 stars */}
-            <ExpertiseItem icon={faAws} name='AWS' stars={3} iconColor='#ec9137' />
-            <ExpertiseItem
-              staticImage={
-                <StaticImage
-                  src='../../images/expertise/PostgreSQL.png'
-                  alt="The 'PostgreSQL' logo"
-                  {...expertiseItemImageProps}
-                />
-              }
-              name='PostgreSQL'
-              stars={3}
-            />
-            <ExpertiseItem icon={faDocker} name='Docker' stars={3} iconColor='#2396ea' />
             <ExpertiseItem
               staticImage={
                 <StaticImage
@@ -230,17 +241,6 @@ function Expertise() {
                 />
               }
               name='Haskell'
-              stars={1}
-            />
-            <ExpertiseItem
-              staticImage={
-                <StaticImage
-                  src='../../images/expertise/Lisp.png'
-                  alt="The 'Scheme' logo"
-                  {...expertiseItemImageProps}
-                />
-              }
-              name='Scheme'
               stars={1}
             />
           </Row>
