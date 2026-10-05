@@ -60,7 +60,12 @@ $utilities: map-get-multiple(
 
     --resume-color: #3fbd79;
     --github-color: rgb(240, 246, 251);
+    --linkedin-color: #2a9fe0; // LinkedIn's #0078b7 is only 2.9:1 on the dark background
     --goodreads-color: rgb(228, 223, 202);
+
+    // Bootstrap's dark-mode link colors; its default blue is only 3.7:1 here
+    --bs-link-color-rgb: 110, 168, 254;
+    --bs-link-hover-color-rgb: 139, 185, 254;
   }
 }
 

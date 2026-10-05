@@ -13,8 +13,6 @@ interface Props {
 
 const { title } = Astro.props;
 
-const GA_MEASUREMENT_ID = "G-E6KB9YT97R";
-
 const favicon = await getImage({ src: icon, width: 32, height: 32, format: "png" });
 const appleTouchIcon = await getImage({ src: icon, width: 180, height: 180, format: "png" });
 ---
@@ -41,24 +39,6 @@ const appleTouchIcon = await getImage({ src: icon, width: 180, height: 180, form
     <link rel="preload" href={montserrat500} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={montserrat700} as="font" type="font/woff2" crossorigin />
 
-    <!-- Google Analytics. Respects Do Not Track, and waits until the page has
-    loaded so it never competes with the page's own content. -->
-    <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
-      if (navigator.doNotTrack !== "1" && window.doNotTrack !== "1") {
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function () {
-          dataLayer.push(arguments);
-        };
-        gtag("js", new Date());
-        gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true, cookie_expires: 0 });
-        addEventListener("load", () => {
-          const script = document.createElement("script");
-          script.async = true;
-          script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-          document.head.append(script);
-        });
-      }
-    </script>
   </head>
   <body>
     <slot />
