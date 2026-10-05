@@ -2,7 +2,7 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import styled from "styled-components";
-import { StaticImage, Layout } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import ExpertiseItem from "./expertise/ExpertiseItem";
 import { SectionHeader } from "../styled/components";
 import {
@@ -17,18 +17,6 @@ import {
   faSwift,
 } from "@fortawesome/free-brands-svg-icons";
 import "./Expertise.css";
-
-const expertiseItemImageProps: {
-  className: string;
-  width: number;
-  layout: Layout;
-  placeholder: "blurred" | "none" | "tracedSVG" | "dominantColor";
-} = {
-  width: 200,
-  layout: "constrained",
-  placeholder: "blurred",
-  className: "expertise-item-image",
-};
 
 const ExpertiseRow = styled(Row)`
   padding-bottom: 70px;
@@ -67,7 +55,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Python.png'
                   alt="The 'Python' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Python'
@@ -78,7 +69,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Django.png'
                   alt="The 'Django' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Django'
@@ -89,7 +83,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/PostgreSQL.png'
                   alt="The 'PostgreSQL' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='PostgreSQL'
@@ -107,7 +104,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Databricks.png'
                   alt="The 'Databricks' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Databricks'
@@ -119,7 +119,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Java.png'
                   alt="The 'Java' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Java'
@@ -130,7 +133,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/TypeScript.png'
                   alt="The 'TypeScript' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='TypeScript'
@@ -141,7 +147,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Redux.png'
                   alt="The 'Redux' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Redux'
@@ -154,7 +163,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/CPlusPlus.png'
                   alt="The 'C' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='C++'
@@ -165,7 +177,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/C.png'
                   alt="The 'C' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='C'
@@ -177,7 +192,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Gatsby.png'
                   alt="The 'Gatsby' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Gatsby'
@@ -188,7 +206,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Bash.png'
                   alt="The 'Bash' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Bash'
@@ -201,7 +222,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/CSharp.png'
                   alt="The 'C' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='C#'
@@ -212,7 +236,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Perl.png'
                   alt="The 'Perl' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Perl'
@@ -226,7 +253,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Angular.png'
                   alt="The 'Angular' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Angular'
@@ -237,7 +267,10 @@ function Expertise() {
                 <StaticImage
                   src='../../images/expertise/Haskell.png'
                   alt="The 'Haskell' logo"
-                  {...expertiseItemImageProps}
+                  width={200}
+                  layout='constrained'
+                  placeholder='blurred'
+                  className='expertise-item-image'
                 />
               }
               name='Haskell'

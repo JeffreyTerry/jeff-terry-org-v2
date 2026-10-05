@@ -220,7 +220,7 @@ function Introduction() {
                   <JobTitle className='d-none d-sm-block'>
                     <span className='me-3'>Software Engineer in</span>
                     <NoWrap>
-                      <FontAwesomeIcon icon={faMapMarkerAlt} className='me-2' />
+                      <FontAwesomeIcon widthAuto icon={faMapMarkerAlt} className='me-2' />
                       <span>Chapel Hill, NC</span>
                     </NoWrap>
                   </JobTitle>
@@ -231,7 +231,7 @@ function Introduction() {
                   <JobTitle>
                     <span className='me-2 me-sm-3'>Software Engineer in</span>
                     <NoWrap>
-                      <FontAwesomeIcon icon={faMapMarkerAlt} className='me-2' />
+                      <FontAwesomeIcon widthAuto icon={faMapMarkerAlt} className='me-2' />
                       <span>Chapel Hill, NC</span>
                     </NoWrap>
                   </JobTitle>
