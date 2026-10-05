@@ -1,30 +1,35 @@
 import React from 'react';
-import { render, cleanup, screen } from '@testing-library/react';
-import MailTo, { createMailToLink } from './MailTo';
+import { render, cleanup, screen, fireEvent } from '@testing-library/react';
+import MailTo, { decodeEmail, encodeEmail } from './MailTo';
 
 afterEach(cleanup);
 
+const encodedEmail = encodeEmail('test@gmail.com');
+
 it('renders without crashing', () => {
   render(
-    <MailTo emailUser='test' emailHost='gmail.com'>
-      Click to open your email client
-    </MailTo>
+    <MailTo encodedEmail={encodedEmail}>Click to open your email client</MailTo>
   );
 });
 
-it('obfuscates the email address', () => {
-  const mailToText = 'hello';
-  render(
-    <MailTo emailUser='test' emailHost='gmail.com'>
-      {mailToText}
-    </MailTo>
+it('keeps the email address out of the DOM', () => {
+  const { container } = render(
+    <MailTo encodedEmail={encodedEmail}>hello</MailTo>
   );
 
-  const mailTo = screen.getByText(mailToText);
-  expect(mailTo.getAttribute('href')).not.toContain('gmail.com');
+  expect(container.innerHTML).not.toContain('test');
+  expect(container.innerHTML).not.toContain('gmail');
 });
 
-it('creates the correct mailto link', () => {
-  const link = createMailToLink('test', 'gmail.com');
-  expect(link).toBe('mailto:test@gmail.com');
+it('ignores clicks dispatched from scripts', () => {
+  render(<MailTo encodedEmail={encodedEmail}>hello</MailTo>);
+
+  const hrefBefore = window.location.href;
+  fireEvent.click(screen.getByText('hello'));
+  expect(window.location.href).toBe(hrefBefore);
+});
+
+it('decodes the encoded address', () => {
+  expect(encodedEmail.join(',')).not.toContain('gmail');
+  expect(decodeEmail(encodedEmail)).toBe('test@gmail.com');
 });

@@ -4,6 +4,8 @@ import React from "react";
 import styled from "styled-components";
 import MailTo from "./MailTo";
 
+const ENCODED_EMAIL = [0, 17, 3, 20, 6, 28, 75, 70, 57, 73, 2, 19, 14, 6, 75, 5, 9, 25];
+
 const StyledMailTo = styled(MailTo)`
   width: fit-content;
   text-align: center;
@@ -41,7 +43,7 @@ const StyledMailTo = styled(MailTo)`
 
 function GetInTouchButton({ icon = true }) {
   return (
-    <StyledMailTo emailUser='REDACTED' emailHost='gmail.com'>
+    <StyledMailTo encodedEmail={ENCODED_EMAIL}>
       {icon && <FontAwesomeIcon widthAuto icon={faEnvelope} className='me-3' />}
       Get&nbsp;in&nbsp;touch
     </StyledMailTo>
