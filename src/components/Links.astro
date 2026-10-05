@@ -1,0 +1,123 @@
+---
+import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faGoodreads, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Icon from "./Icon.astro";
+
+const links = [
+  { name: "Resume", href: "/JeffTerryResume.pdf", icon: faFileAlt, color: "var(--resume-color)" },
+  {
+    name: "Github",
+    href: "https://github.com/JeffreyTerry",
+    icon: faGithub,
+    color: "var(--github-color)",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/theonlyjeff2/",
+    icon: faLinkedin,
+    color: "var(--linkedin-color)",
+  },
+  {
+    name: "Goodreads",
+    href: "https://www.goodreads.com/user/show/43070334-jeffrey-terry",
+    icon: faGoodreads,
+    color: "var(--goodreads-color)",
+  },
+];
+---
+
+<div class="row links-row">
+  <div class="col-10 offset-1 col-3k-8 offset-3k-2 col-4k-6 offset-4k-3">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-header">Links</h2>
+      </div>
+    </div>
+    <div class="row">
+      {
+        links.map(({ name, href, icon, color }) => (
+          <div class="col-12 col-md-6 col-xl-3 link-col">
+            <a href={href} style={{ color }}>
+              <h3 class="link-item">
+                <span class="nowrap">
+                  <Icon icon={icon} class="me-3" />
+                  {name}
+                </span>
+              </h3>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .links-row {
+    background-color: var(--bg-color-secondary);
+    padding-bottom: 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .links-row {
+      padding-bottom: 3.5rem;
+    }
+  }
+
+  .link-col {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .link-col {
+      margin-bottom: 2.75rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    .link-col {
+      margin-bottom: 3rem;
+    }
+  }
+  .link-col a {
+    text-decoration: none;
+  }
+  .link-col a:hover {
+    text-decoration: underline;
+  }
+
+  .link-item {
+    margin-bottom: 60px;
+    font-size: 2rem;
+    font-weight: 500;
+    display: inline;
+  }
+  @media (min-width: 768px) {
+    .link-item {
+      font-size: 2.75rem;
+    }
+  }
+  @media (min-width: 1400px) {
+    .link-item {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 1800px) {
+    .link-item {
+      font-size: 3.25rem;
+    }
+  }
+  @media (min-width: 2400px) {
+    .link-item {
+      font-size: 3.5rem;
+    }
+  }
+  @media (min-width: 2800px) {
+    .link-item {
+      font-size: 3.75rem;
+    }
+  }
+  @media (min-width: 3800px) {
+    .link-item {
+      font-size: 4.25rem;
+    }
+  }
+</style>

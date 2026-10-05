@@ -1,9 +1,20 @@
 # JeffTerry.org
 
-My personal site, built using Gatsby and hosted on github pages.
+My personal site, built with [Astro](https://astro.build) and hosted on GitHub Pages.
+
+## Development
+
+```sh
+npm install
+npm run dev      # http://localhost:4321
+npm test
+npm run check    # type-check
+npm run build    # outputs to dist/
+npm run preview  # serves dist/
+```
 
 ## Deployment
 
-To get `npm run deploy` to work, you may need to increase git's http post buffer on your local
-machine. You can increase the buffer by running `git config --global http.postBuffer <buffer_size>`.
-A `buffer_size` of `524288000` worked for me.
+Pushing to `main` builds the site and deploys it to GitHub Pages
+(`.github/workflows/deploy.yml`). The workflow also runs weekly so the
+experience stats, which are computed at build time, stay current.

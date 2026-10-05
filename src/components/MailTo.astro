@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {
+  /** The address as produced by `encodeEmail`. */
+  encodedEmail: number[];
+}
+
+const { encodedEmail, ...rest } = Astro.props;
+---
+
+<a href="#" rel="nofollow" data-encoded-email={encodedEmail.join(",")} {...rest}><slot /></a>
+
+<script>
+  import { setUpMailToLinks } from "../scripts/mailto";
+  setUpMailToLinks();
+</script>
