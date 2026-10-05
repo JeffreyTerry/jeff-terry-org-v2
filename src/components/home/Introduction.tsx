@@ -220,7 +220,7 @@ function Introduction() {
                   <JobTitle className='d-none d-sm-block'>
                     <span className='me-3'>Software Engineer in</span>
                     <NoWrap>
-                      <FontAwesomeIcon icon={faMapMarkerAlt} className='me-2' />
+                      <FontAwesomeIcon widthAuto icon={faMapMarkerAlt} className='me-2' />
                       <span>Chapel Hill, NC</span>
                     </NoWrap>
                   </JobTitle>
@@ -231,7 +231,7 @@ function Introduction() {
                   <JobTitle>
                     <span className='me-2 me-sm-3'>Software Engineer in</span>
                     <NoWrap>
-                      <FontAwesomeIcon icon={faMapMarkerAlt} className='me-2' />
+                      <FontAwesomeIcon widthAuto icon={faMapMarkerAlt} className='me-2' />
                       <span>Chapel Hill, NC</span>
                     </NoWrap>
                   </JobTitle>
@@ -288,11 +288,11 @@ function Introduction() {
               </BiographyParagraph>
               <BiographyParagraph>
                 I’m currently at <OutboundLink href='https://spade.com'>Spade</OutboundLink> (YC
-                W22), where I'm working on building infrastructure to make possible the next wave of
-                fintech innovation. As Spade's first engineering hire, I've spearheaded the buildout
-                of our V2 API—including infrastructure, backend, developer tooling, CI/CD pipelines,
-                testing strategy, monitoring and logging systems, and more—while playing a leading
-                role in establishing our engineering team culture and processes.
+                W22), where we're building the data and AI platform for modern finance. As Spade's
+                first engineering hire, I helped spearhead the buildout of our transaction enrichment
+                API—including infrastructure, backend, developer tooling, CI/CD pipelines, testing
+                strategy, monitoring and logging systems, etc...—while helping to establish our
+                engineering team culture and processes.
               </BiographyParagraph>
               {readMore && (
                 <>
