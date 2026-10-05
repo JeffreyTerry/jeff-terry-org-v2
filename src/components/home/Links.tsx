@@ -40,7 +40,6 @@ const LinkCol = styled(Col)`
 `;
 
 const LinkItem = styled.h3`
-  color: ${(props) => props.theme.themePrimary};
   margin-bottom: 60px;
   font-size: 2rem;
   font-weight: 500;
@@ -89,7 +88,7 @@ function Links() {
                 >
                   <LinkItem>
                     <NoWrap>
-                      <FontAwesomeIcon icon={faFileAlt} className='me-3' />
+                      <FontAwesomeIcon widthAuto icon={faFileAlt} className='me-3' />
                       Resume
                     </NoWrap>
                   </LinkItem>
@@ -104,7 +103,7 @@ function Links() {
                 >
                   <LinkItem>
                     <NoWrap>
-                      <FontAwesomeIcon icon={faGithub} className='me-3' />
+                      <FontAwesomeIcon widthAuto icon={faGithub} className='me-3' />
                       Github
                     </NoWrap>
                   </LinkItem>
@@ -117,7 +116,7 @@ function Links() {
                 >
                   <LinkItem>
                     <NoWrap>
-                      <FontAwesomeIcon icon={faLinkedin} className='me-3' />
+                      <FontAwesomeIcon widthAuto icon={faLinkedin} className='me-3' />
                       LinkedIn
                     </NoWrap>
                   </LinkItem>
@@ -133,7 +132,7 @@ function Links() {
                 >
                   <LinkItem>
                     <NoWrap>
-                      <FontAwesomeIcon icon={faGoodreads} className='me-3' />
+                      <FontAwesomeIcon widthAuto icon={faGoodreads} className='me-3' />
                       Goodreads
                     </NoWrap>
                   </LinkItem>

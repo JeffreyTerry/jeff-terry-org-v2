@@ -24,9 +24,9 @@ function StarRating({ stars }: { stars: number }) {
       {starsArray.map((solid, i) => (
         <Star key={`star-${i}`}>
           {solid ? (
-            <FontAwesomeIcon icon={faStarSolid} data-testid='star-rating-solid-star' />
+            <FontAwesomeIcon widthAuto icon={faStarSolid} data-testid='star-rating-solid-star' />
           ) : (
-            <FontAwesomeIcon icon={faStarRegular} data-testid='star-rating-regular-star' />
+            <FontAwesomeIcon widthAuto icon={faStarRegular} data-testid='star-rating-regular-star' />
           )}
         </Star>
       ))}
