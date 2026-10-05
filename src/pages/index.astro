@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Introduction from "../components/Introduction.astro";
+import RecentProjects from "../components/RecentProjects.astro";
+import Expertise from "../components/Expertise.astro";
+import Links from "../components/Links.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Jeff Terry">
+  <main class="container-fluid home">
+    <Introduction />
+    <RecentProjects />
+    <Expertise />
+    <Links />
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .home {
+    padding-top: 50px;
+  }
+</style>

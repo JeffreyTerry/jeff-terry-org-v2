@@ -1,0 +1,66 @@
+---
+import "@fontsource/montserrat/500.css";
+import "@fontsource/montserrat/700.css";
+import "../styles/global.scss";
+import { getImage } from "astro:assets";
+import montserrat500 from "@fontsource/montserrat/files/montserrat-latin-500-normal.woff2?url";
+import montserrat700 from "@fontsource/montserrat/files/montserrat-latin-700-normal.woff2?url";
+import icon from "../images/icon.png";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const GA_MEASUREMENT_ID = "G-E6KB9YT97R";
+
+const favicon = await getImage({ src: icon, width: 32, height: 32, format: "png" });
+const appleTouchIcon = await getImage({ src: icon, width: 180, height: 180, format: "png" });
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Jeff Terry is a software engineer in Chapel Hill, NC who builds full-stack software, infrastructure and data pipelines."
+    />
+    <meta
+      name="keywords"
+      content="Jeffrey, Terry, Software, Engineer, Durham, Chapel Hill, Raleigh, North Carolina, Norman, Oklahoma"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href={favicon.src} type="image/png" />
+    <link rel="apple-touch-icon" href={appleTouchIcon.src} />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preload" href={montserrat500} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={montserrat700} as="font" type="font/woff2" crossorigin />
+
+    <!-- Google Analytics. Respects Do Not Track, and waits until the page has
+    loaded so it never competes with the page's own content. -->
+    <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+      if (navigator.doNotTrack !== "1" && window.doNotTrack !== "1") {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          dataLayer.push(arguments);
+        };
+        gtag("js", new Date());
+        gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true, cookie_expires: 0 });
+        addEventListener("load", () => {
+          const script = document.createElement("script");
+          script.async = true;
+          script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+          document.head.append(script);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

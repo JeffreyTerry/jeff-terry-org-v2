@@ -1,0 +1,141 @@
+// Only the parts of Bootstrap the site uses: reboot, the grid and a handful of utilities.
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$utilities: map-get-multiple(
+  $utilities,
+  ("align-items", "display", "margin-end", "margin-top", "text-align")
+);
+
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/utilities/api";
+
+// Extra grid tiers for 2K–4K screens, e.g. `col-3k-8 offset-3k-2`
+@each $tier, $min-width in (2k: 1800px, 3k: 2800px, 4k: 3800px) {
+  @media (min-width: $min-width) {
+    .col-#{$tier}-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+    @for $i from 1 through $grid-columns {
+      .col-#{$tier}-#{$i} {
+        flex: 0 0 auto;
+        width: percentage(divide($i, $grid-columns));
+      }
+    }
+    @for $i from 0 through $grid-columns - 1 {
+      .offset-#{$tier}-#{$i} {
+        margin-left: if($i == 0, 0, percentage(divide($i, $grid-columns)));
+      }
+    }
+  }
+}
+
+// Colors follow the visitor's system light/dark setting
+:root {
+  --bg-color: #fff;
+  --bg-color-secondary: #f7f2ed;
+  --primary-color: #2d728f; // contrast ratio 5.36
+  --light-bg-color: #fff;
+  --light-primary-color: #2d728f;
+
+  --resume-color: #009d49;
+  --github-color: #171515;
+  --linkedin-color: #0078b7;
+  --goodreads-color: #553b0e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1e1e1e;
+    --bg-color-secondary: #2d2d2d;
+    --primary-color: #cccccc; // contrast ratio >= 8.57
+
+    --resume-color: #3fbd79;
+    --github-color: rgb(240, 246, 251);
+    --goodreads-color: rgb(228, 223, 202);
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.section-header {
+  font-size: 2.25rem;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+
+  @media (min-width: 576px) {
+    font-size: 3.25rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    text-align: left;
+  }
+  @media (min-width: 992px) {
+    font-size: 3.75rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 4rem;
+    margin-bottom: 3.75rem;
+    margin-left: 4rem;
+  }
+  @media (min-width: 1600px) {
+    font-size: 4.25rem;
+  }
+  @media (min-width: 2000px) {
+    font-size: 4.5rem;
+  }
+  @media (min-width: 2800px) {
+    font-size: 4.75rem;
+  }
+  @media (min-width: 3800px) {
+    font-size: 5rem;
+  }
+}
+
+// The subset of FontAwesome's stylesheet that inline SVG icons need
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+
+.fa-width-auto {
+  --fa-width: auto;
+}

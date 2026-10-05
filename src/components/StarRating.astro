@@ -1,0 +1,36 @@
+---
+import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
+import Icon from "./Icon.astro";
+
+interface Props {
+  stars: number;
+}
+
+const { stars } = Astro.props;
+
+// One entry per star: `true` for a solid star, `false` for an empty one
+const starsArray = [...Array(5)].map((_, i) => i < stars);
+---
+
+<div role="img" aria-label={`${stars} out of 5 stars`}>
+  {
+    starsArray.map((solid) => (
+      <div class="star">
+        {solid ? (
+          <Icon icon={faStarSolid} data-testid="star-rating-solid-star" />
+        ) : (
+          <Icon icon={faStarRegular} data-testid="star-rating-regular-star" />
+        )}
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .star {
+    color: var(--primary-color);
+    display: inline-block;
+    margin-right: 0.2rem;
+  }
+</style>

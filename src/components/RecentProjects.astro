@@ -1,0 +1,63 @@
+---
+import RecentProjectImage from "./RecentProjectImage.astro";
+import AskMeLearning from "../images/AskMeLearning.png";
+import Presly from "../images/Presly.png";
+import Surfy from "../images/Surfy.png";
+---
+
+<div class="row recent-projects-row">
+  <div class="col-10 offset-1 col-3k-8 offset-3k-2 col-4k-6 offset-4k-3">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-header">Recent Projects</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-4 project-col">
+        <RecentProjectImage projectUrl="https://getsurfy.org" projectName="Surfy" image={Surfy} />
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 project-col">
+        <RecentProjectImage projectUrl="https://presly.org" projectName="Presly" image={Presly} />
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 project-col">
+        <RecentProjectImage
+          projectUrl="https://askmelearning.org/courses"
+          projectName="AskMe Learning"
+          image={AskMeLearning}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .recent-projects-row {
+    background-color: var(--bg-color-secondary);
+    padding-bottom: 2rem;
+  }
+  @media (min-width: 992px) {
+    .recent-projects-row {
+      padding-bottom: 2.5rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    .recent-projects-row {
+      padding-bottom: 3.5rem;
+    }
+  }
+
+  .project-col {
+    margin-bottom: 2.5rem;
+  }
+  @media (min-width: 576px) {
+    .project-col {
+      margin-bottom: 3rem;
+    }
+  }
+  @media (min-width: 1800px) {
+    .project-col {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+</style>

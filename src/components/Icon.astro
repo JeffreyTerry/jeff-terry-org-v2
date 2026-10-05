@@ -1,0 +1,21 @@
+---
+// Renders a FontAwesome icon as inline SVG at build time, so no FontAwesome JS ships.
+import { icon, type IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
+interface Props {
+  icon: IconDefinition;
+  class?: string;
+  color?: string;
+  [attribute: `data-${string}`]: string;
+}
+
+const { icon: definition, class: className, color, ...attributes } = Astro.props;
+
+const { html } = icon(definition, {
+  classes: ["fa-width-auto", ...(className?.split(" ").filter(Boolean) ?? [])],
+  styles: color ? { color } : {},
+  attributes,
+});
+---
+
+<Fragment set:html={html.join("")} />

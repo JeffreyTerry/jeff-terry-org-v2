@@ -1,0 +1,103 @@
+---
+import {
+  faAws,
+  faBootstrap,
+  faCss3Alt,
+  faDocker,
+  faHtml5,
+  faJsSquare,
+  faNodeJs,
+  faReact,
+  faSwift,
+} from "@fortawesome/free-brands-svg-icons";
+import ExpertiseItem from "./ExpertiseItem.astro";
+import Angular from "../images/expertise/Angular.png";
+import Bash from "../images/expertise/Bash.png";
+import C from "../images/expertise/C.png";
+import CPlusPlus from "../images/expertise/CPlusPlus.png";
+import CSharp from "../images/expertise/CSharp.png";
+import Databricks from "../images/expertise/Databricks.png";
+import Django from "../images/expertise/Django.png";
+import Gatsby from "../images/expertise/Gatsby.png";
+import Haskell from "../images/expertise/Haskell.png";
+import Java from "../images/expertise/Java.png";
+import Perl from "../images/expertise/Perl.png";
+import PostgreSQL from "../images/expertise/PostgreSQL.png";
+import Python from "../images/expertise/Python.png";
+import Redux from "../images/expertise/Redux.png";
+import TypeScript from "../images/expertise/TypeScript.png";
+---
+
+<div class="row expertise-row">
+  <div class="col-10 offset-1 col-3k-8 offset-3k-2 col-4k-6 offset-4k-3">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-header">Languages &amp; Technologies</h2>
+      </div>
+    </div>
+    <div class="row">
+      {/* 5 stars */}
+      <ExpertiseItem icon={faAws} name="AWS" stars={5} iconColor="#ec9137" />
+      <ExpertiseItem image={Python} name="Python" stars={5} />
+      <ExpertiseItem image={Django} name="Django" stars={5} />
+      <ExpertiseItem image={PostgreSQL} name="PostgreSQL" stars={5} />
+      <ExpertiseItem icon={faReact} name="ReactJS" stars={5} iconColor="#61dbfa" />
+      <ExpertiseItem icon={faJsSquare} name="JavaScript" stars={5} iconColor="#f7df3a" />
+      <ExpertiseItem icon={faHtml5} name="HTML" stars={5} iconColor="#254deb" />
+      <ExpertiseItem icon={faCss3Alt} name="CSS" stars={5} iconColor="#e44d29" />
+      <ExpertiseItem icon={faBootstrap} name="Bootstrap" stars={5} iconColor="#7853b0" />
+
+      {/* 4 stars */}
+      <ExpertiseItem image={Databricks} name="Databricks" stars={4} />
+      <ExpertiseItem icon={faDocker} name="Docker" stars={4} iconColor="#2396ea" />
+      <ExpertiseItem image={Java} name="Java" stars={4} />
+      <ExpertiseItem image={TypeScript} name="TypeScript" stars={4} />
+      <ExpertiseItem image={Redux} name="Redux" stars={4} />
+
+      {/* 3 stars */}
+      <ExpertiseItem image={CPlusPlus} name="C++" stars={3} />
+      <ExpertiseItem image={C} name="C" stars={3} />
+      <ExpertiseItem icon={faNodeJs} name="NodeJS" stars={3} iconColor="#689f66" />
+      <ExpertiseItem image={Gatsby} name="Gatsby" stars={3} />
+      <ExpertiseItem image={Bash} name="Bash" stars={3} />
+
+      {/* 2 stars */}
+      <ExpertiseItem image={CSharp} name="C#" stars={2} />
+      <ExpertiseItem image={Perl} name="Perl" stars={2} />
+
+      {/* 1 star */}
+      <ExpertiseItem icon={faSwift} name="Swift" stars={1} iconColor="#f05139" />
+      <ExpertiseItem image={Angular} name="Angular" stars={1} />
+      <ExpertiseItem image={Haskell} name="Haskell" stars={1} />
+    </div>
+    <div class="row">
+      <div class="col-12 outro-col">
+        <h3 class="outro-text">...and I'm always learning new stuff!</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .expertise-row {
+    padding-bottom: 70px;
+  }
+
+  .outro-col {
+    text-align: center;
+  }
+
+  .outro-text {
+    font-size: 1.75rem;
+  }
+  @media (min-width: 768px) {
+    .outro-text {
+      font-size: 1.85rem;
+    }
+  }
+  @media (min-width: 992px) {
+    .outro-text {
+      font-size: 2.25rem;
+    }
+  }
+</style>
