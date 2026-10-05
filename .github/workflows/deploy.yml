@@ -39,11 +39,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: npm
       - name: Install dependencies
-        # A couple of package version are conflicting, so I have to use `--legacy-peer-deps` at the moment
-        run: npm install --include=dev --legacy-peer-deps
+        run: npm ci --include=dev
       - name: Check types
         id: type-check
         run: npm run type-check
@@ -61,7 +60,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: npm
       - name: Setup Pages
         id: pages
@@ -80,8 +79,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
       - name: Install dependencies
-        # A couple of package version are conflicting, so I have to use `--legacy-peer-deps` at the moment
-        run: npm install --legacy-peer-deps
+        run: npm ci
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: "true"

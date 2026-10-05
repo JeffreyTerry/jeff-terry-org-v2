@@ -84,7 +84,7 @@ function ExpertiseItem({
   return (
     <ExpertiseItemCol xs={6} sm={4} md={3} xl={2}>
       <ExpertiseItemContainer>
-        {icon && <ExpertiseItemIcon icon={icon} style={{ color: iconColor }} />}
+        {icon && <ExpertiseItemIcon widthAuto icon={icon} style={{ color: iconColor }} />}
         {staticImage && staticImage}
         <ExpertiseItemName>{name}</ExpertiseItemName>
         <StarRating stars={stars} />
